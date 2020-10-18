@@ -1,0 +1,418 @@
+@charset "utf-8";
+@import "reset";
+
+
+$pc: 1000px; // PC
+$tab: 850px; // タブレット
+$sp: 660px;  // スマホ
+$sp-second: 500px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin sp-second {
+    @media (max-width: ($sp-second)) {
+      @content;
+    }
+}
+
+
+
+
+
+
+body{
+    font-family: 'Noto Serif JP', serif;
+    background-color: #FBFCFC;
+}
+
+
+
+.first-wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 30px;
+
+    @include pc {
+        max-width: 870px;
+    }
+
+    @include sp-second {
+        padding: 30px 10px;
+    }
+
+    h1{
+        font-size: 35px;
+        margin-bottom: 40px;
+        border-bottom: 5px solid #C0392B;
+        padding-bottom: 5px;
+
+        @include sp {
+            font-size: 30px;
+        }
+
+        @include sp-second {
+            font-size: 20px;
+        }
+
+    }
+
+    &-title{
+        border-left: solid 8px #EC7063;/*左線（実線 太さ 色）*/
+        font-size: 25px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        
+        @include sp {
+            font-size: 18px;
+        }
+        
+    }
+
+
+
+
+
+    p{
+        margin: 5px 0px;
+        line-height: 30px;
+
+        @include sp {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+  
+
+
+    .gallery{
+        max-width: 940px;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+
+        @include sp {
+
+        }
+
+
+        .item{
+            margin-bottom: 60px;
+            width: 260px;
+            margin-right: 20px;
+            margin-left: 20px;
+
+        @include pc {
+            width: 230px;
+        }
+
+        @include sp {
+            width: 180px;
+        }
+
+        @include sp-second {
+            width: 330px;
+            margin-bottom: 40px;
+        }
+
+        h2{
+            margin: 15px 0px;
+        }
+
+
+        img{
+            width: 260px;
+            height: 320px;
+
+        @include pc {
+            width: 230px;
+
+        }
+
+        @include sp {
+            width: 180px;
+            height: 260px;
+        }
+
+        @include sp-second {
+            width: 180px;
+            height: 240px;
+        }
+
+
+        }/*img*/
+
+
+        p{
+            text-align: left;
+            display: inline-block;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+
+    }/*item*/
+
+
+    
+
+
+}/*gallery*/
+
+}/*first-wrapper*/
+
+
+
+
+
+.second-wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 30px;
+
+   
+    @include pc {
+        max-width: 870px;
+    }
+
+    @include sp-second {
+        padding: 30px 10px;
+    }
+
+    
+
+    &-title{
+        font-size: 25px;
+        padding-left: 10px;
+        border-left: solid 8px #EC7063;/*左線（実線 太さ 色）*/
+        margin-bottom: 20px;
+
+        @include sp {
+            font-size: 18px;
+        }
+       
+    }
+
+    p{
+        line-height: 30px;
+
+        @include sp {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+    }
+
+    .gallery{
+        max-width: 940px;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+
+
+        .item{
+            margin-bottom: 60px;
+            width: 260px;
+            margin-right: 20px;
+            margin-left: 20px;
+
+
+            @include pc {
+                width: 230px;
+            }
+
+            @include sp {
+                width: 180px;
+            }
+
+            @include sp-second {
+                width: 330px;
+                margin-bottom: 40px;
+            }
+
+        h2{
+            margin: 15px 0px;
+        }
+
+
+        img{
+            width: 260px;
+            height: 320px;
+
+            @include pc {
+                width: 230px;
+            }
+
+            @include sp {
+                width: 180px;
+                height: 260px;
+            }
+
+            @include sp-second {
+                width: 180px;
+                height: 240px;
+            }
+
+        }/*img*/
+    }/*item*/
+}/*gallery*/
+
+
+.order-btn{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+
+    @include sp-second {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a{
+        display: inline-block;
+        padding: 20px 100px;
+        text-decoration: none;
+        color: black;
+        background-color: #fa8176;
+        border: 2px solid #fa8176;
+
+
+    @include sp-second {
+        padding: 15px 40px;
+    }
+
+
+    }/*a*/
+}/*order-btn*/
+
+
+    a:hover{
+        background-color: #FBFCFC;
+        transition: 0.8s;
+    }/*a*/
+
+
+}/*hover*/
+
+
+
+
+.third-wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 30px;
+
+
+    h3{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 0.5em;/*文字周りの余白*/
+        color: #000000;/*文字色*/
+        background: #FDEDEC;/*背景色*/
+        border-left: solid 5px #F5B7B1;/*左線（実線 太さ 色）*/
+
+        @include sp {
+            font-size: 16px;
+        }
+
+    }
+
+    p{
+
+        @include sp {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }/*p*/
+
+
+    .order-btn{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    
+        @include sp-second {
+            width: 100%;
+            font-size: 18px;
+        }
+    
+        a{
+            display: inline-block;
+            padding: 20px 100px;
+            text-decoration: none;
+            color: black;
+            background-color: #fa8176;
+            border: 2px solid #fa8176;
+    
+    
+        @include sp-second {
+            padding: 15px 40px;
+
+        }
+    
+    
+        }/*a*/
+    }/*order-btn*/
+    
+    
+        a:hover{
+            display: inline-block;
+            background-color: #FDEDEC;
+            transition: 0.8s;
+    
+    
+    }/*hover*/
+
+
+    
+    
+}/*third-wrapper*/
+
+
+
+
+.back{
+
+    a{
+     color: rgb(113, 9, 145);
+     border-bottom: 1px solid ;
+     font-size: 14px;
+
+    }/*a*/
+
+    }/*.back*/
+
+    a:hover{
+        border-bottom: 0px;
+        opacity: 0.8;
+    }
+
+

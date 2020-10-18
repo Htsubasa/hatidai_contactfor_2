@@ -1,0 +1,671 @@
+
+
+$pc: 1150px; // PC
+$tab: 900px; // タブレット
+$sp: 630px;  // スマホ
+$sp-second: 470px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin sp-second {
+    @media (max-width: ($sp-second)) {
+      @content;
+    }
+  }
+
+
+
+.main{
+  margin-top: 60px;
+
+  h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include tab{
+      font-size: 30px;
+      margin-bottom: 40px;
+      }  
+
+      @include sp{
+        font-size: 24px;
+        }  
+
+
+  }
+    .first-wrapper{
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 60px;
+
+    .wpcf7c-elm-step2{
+      text-align: center;
+      letter-spacing: 7px;
+      font-size: 25px;
+      color: red;
+      font-weight: 600;
+    }
+
+
+  
+
+    input.wpcf7c-conf{
+          background-color:rgb(232, 240, 254) !important;
+      }
+
+      table{
+        border-collapse: collapse;
+        width: 880px;
+        margin: 0 auto;
+
+        @include tab{
+          width: 600px;
+        }
+      
+
+        @include sp{
+          width: 460px;
+        }
+
+
+        @include sp-second{
+          max-width: 460px;
+          width: 100%;
+        }
+        
+        }
+
+        th{
+          background-color: #F4F3F0;
+          padding: 40px 0px;
+          border: solid 1px rgb(167, 167, 167);
+          width: 50%;
+          line-height: 15px;
+          box-sizing: border-box;
+
+          @include tab{
+            display: block;
+            width: 100%;
+          }  
+
+          @include sp-second{
+            margin: 0 auto;
+            padding: 15px 0px;   
+            font-size: 14px;     
+            max-width: 460px;
+          　width: 100%;    
+          }
+
+          .under-comment{
+            width: 380px;
+            margin: 0 auto;
+            margin-top: 10px;
+            font-size: 14px;
+            color:red;
+            line-height: 1.5;
+
+            @include sp-second(){
+              font-size: 12px;
+              width: 250px;
+            }
+          }
+
+          .caution{
+            color: black;
+            line-height: 15px;
+            display: block;
+          }
+
+          .fee{
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 0px;
+          }
+
+       
+          .middle-second-span{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px;
+            color: red;
+            
+            @include sp{
+              font-size: 14px;
+            }
+
+          }
+
+
+          .color-first{
+            color: #000080;
+            font-size: 16px;
+          }
+
+
+          .color-second{
+            color: red;
+            font-size: 16px;
+          }
+
+          .color-third{
+            color: #6ed46e	;
+            font-size: 16px;
+          }
+
+          .type{
+            margin: 0;
+            font-size: 14px;
+            padding-top: 10px;
+
+            .caliculation{
+              font-size: 16px;
+              color: black;
+              font-weight: normal;
+            }/*caliculation*/
+        
+          .sum{
+            font-size: 18px;
+
+            @include sp{
+              font-size: 14px;
+              }  
+
+          }
+
+          }/*type*/
+
+          .extra-text{
+            font-size: 14px;
+            font-weight: normal;
+           margin: 0; 
+           padding-top: 10px;
+          }
+
+      
+
+          .color-fourth{
+            color: #f356f3;
+            font-size: 16px;
+          }
+
+          span{
+            color: red;
+            font-size: 11px;
+            margin-left: 10px;
+            line-height: 1.7;
+          }
+
+          .sign-type{
+            color: black;
+            font-size: 14px;
+          }
+
+
+      .price-bottom{
+        font-size: 18px;
+        line-height: 30px;
+
+        @include sp{
+          font-size: 14px;
+          }  
+  
+      }
+
+      .span-text{
+        color: rgb(91, 91, 230);
+        margin-left: 0px;
+        padding-top: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(91, 91, 230);
+
+        @include sp{
+        font-size: 10px;
+        }  
+
+      }
+
+      .span-text:hover{
+        opacity: 0.6;
+      }
+
+
+
+        }/*th*/
+
+
+        .comment{
+          @include tab{
+            height: 200px;
+          }  
+        }
+
+        td{
+          text-align: center;
+          border: solid 1px rgb(167, 167, 167);
+          box-sizing: border-box;
+
+
+          @include tab{
+            display: block;
+            width: 100%;
+            height:90px;
+            position: relative;
+          }  
+
+
+          @include sp-second{
+            width: 100%;
+            margin: 0 auto;
+            height: 70px;
+          }
+        
+          .wpcf7-form-control-wrap {
+            position: initial!important;
+          }
+
+
+            
+          #option{
+            padding: 2px 2px;
+            width: 170px;
+
+            @include tab{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+              height: 30px;
+            }  
+
+            @include sp-second{
+              width: 70%;
+            }
+
+          }
+
+          #option-number{
+            width: 170px;
+
+            @include tab{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+              height: 30px;
+            }  
+
+            @include sp-second{
+              width:70%;
+            }
+
+          }
+
+          input{
+            width: 350px;
+            height: 35px;
+
+            @include tab{
+              position: absolute;
+              top: 0px;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+            }  
+
+            @include sp-second{
+              width: 80%;
+            }
+
+        
+
+          
+          }
+        }/*td*/
+      }/*table*/
+
+      .middle-title{
+        max-width: 880px;
+        width: 100%;
+        padding: 20px 0;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid black;
+        box-sizing: border-box;
+        border-top: none;
+        border-bottom: none;
+        background-color: #D9D9D9;
+        font-weight: bold;
+
+        @include tab{
+          width: 600px;
+        }
+
+        @include sp{
+          width: 460px;
+        }
+
+        @include sp-second{
+          max-width: 460px;
+          width: 100%;         
+        }
+
+
+        p{
+          margin-top: 0;
+          margin-bottom: 0;
+          display: none;
+        }
+      }
+
+
+      .middle-text{
+        margin: 5px 0;
+        font-weight: 500;
+        line-height: 1.4em;
+        font-weight: bold;
+      }
+
+      .middle-second-text{
+        font-size: 14px;
+        margin: 0px;
+        font-weight: 500;
+
+
+
+        .middle-second-span{
+          font-size: 14px;
+          margin: 0px;
+          color: red;
+        }
+      }/*middle-second-text*/
+
+    
+
+      .extra{
+        padding: 10px 0px;
+        background-color: #D9D9D9;
+
+        @include tab{
+          display: none !important ; 
+        }
+      }
+
+      .second-line{
+        width: 30%;
+      }
+
+      textarea{
+        height: 150px;
+        width: 400px;
+        margin: 20px 0px;
+
+        @include sp-second{
+          width: 80%;
+        }
+
+      }
+    
+
+      #pay{
+        padding: 2px 2px;
+
+        @include tab{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          height: 30px;
+        }  
+      }
+
+
+     .price{
+       margin-bottom: 30px;
+
+
+      &-table{
+        font-size: 30px;
+        padding: 50px 0px;
+        background-color: #D9D9D9;
+        position: relative;
+
+
+        @include tab{
+          padding-top: 80px;
+          padding-bottom: 120px;
+        }  
+
+        @include sp{
+          font-size: 25px;
+          padding-top: 80px;
+        }  
+
+        .sum-input{
+
+          @include tab{
+            position: absolute;
+            top: -40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }  
+          
+          }
+
+
+        
+
+        input{
+          width: 250px;
+          height: 50px;
+          font-size: 30px; 
+
+          @include tab{
+          }
+
+          @include sp{
+            position: absolute;
+            top: -30px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }  
+        
+        }/*input*/
+
+        span{
+          @include tab{
+            display: none;  
+          }
+
+        }
+
+        .extra-letter{
+          font-size: 12px;
+          color: red;
+          font-weight: bold;
+
+          @include tab{
+            display: block;  
+          }
+
+          @include sp-second(){
+            width: 95%;
+            margin: 0 auto;
+          }
+        }/*extra-letter*/
+
+      }/*&-table*/
+    
+     }
+
+
+
+     .confirm-btn{
+      border: 1px solid black;
+      width: 340px;
+      height: 80px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 80px;
+      margin-top: 60px;
+
+      @include sp-second(){
+        width: 260px;
+        height: 70px;
+        line-height: 70px;
+      }
+
+      a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 22px;
+      }
+
+
+      a:hover{
+        opacity: 0.6;
+      }
+
+
+    }/*confirm-btn*/
+
+   
+
+
+
+
+
+    .detail{
+      width: 880px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding-top: 50px;
+
+      @include tab{
+        width: 600px;
+        margin-top: 50px;
+      }
+
+      @include sp{
+        width: 460px;
+        font-size: 12px;
+      }
+
+      @include sp-second{
+        width: 300px;
+        padding-top: 0px;
+      }
+
+      .detail_title{
+        font-size: 20px;
+      }
+
+      p{
+        margin: 0;
+      }
+
+      .red-part{
+        color: red;
+      }
+
+      .title{
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .personal-info{
+        margin-top: 30px;
+        font-size: 12px;
+      }
+
+      &-second-part{
+        padding-top: 30px;
+      }
+
+
+    }
+
+
+.wpcf7c-conf {
+  background-color: #eee ; /* 背景色 */
+  color: black; /* 文字色 */
+  border: 1px solid #AEAEAE; /* 周りの線: 太さ　線種 線の色 */
+}
+
+
+.btn-input{
+  text-align: center;
+  margin-top: 60px;
+
+  @include sp-second{
+    margin-top: 40px;
+  }
+
+
+input.wpcf7c-btn-back, 
+input.wpcf7-submit,  
+input.wpcf7-confirm {
+  padding: 10px 40px;
+  font-size: 18px;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+input.wpcf7c-btn-back, 
+input.wpcf7-submit,  
+input.wpcf7-confirm :hover{
+  cursor: pointer;
+}
+
+
+
+input.wpcf7-submit:hover{
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+
+input.wpcf7-submit{
+  background-color: rgb(245, 121, 121) ;
+  border-radius: 3px;
+  border: 1px solid rgb(143, 140, 140);
+}
+
+}
+
+
+
+  }/*first-wrapper*/
+/*main*/
